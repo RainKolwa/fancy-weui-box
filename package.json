@@ -23,9 +23,12 @@
     "react": "15.x"
   },
   "devDependencies": {
+    "glamor": "^2.20.40",
+    "glamorous": "^4.6.0",
     "nwb": "0.18.x",
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "react-swipeable-views": "^0.12.8"
   },
   "author": "",
   "homepage": "",
