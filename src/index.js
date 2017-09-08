@@ -5,6 +5,7 @@ import SwipeableViews from 'react-swipeable-views'
 
 const style = css({
   position: 'fixed',
+  zIndex: '9999',
   left: '100%',
   top: 0,
   bottom: 0,
@@ -31,8 +32,11 @@ const style = css({
         bottom: 0,
         display: 'flex',
         alignItems: 'center',
+        justifyContent: 'center',
         background: 'black',
-        ' img': { width: '100%' }
+        overflowY: 'scroll',
+        scrollBehavior: 'smooth',
+        ' img': { display: 'block', width: '100%', height: 'auto'  }
       },
     },
   },

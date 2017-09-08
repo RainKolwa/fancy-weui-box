@@ -1,11 +1,11 @@
 import React, {Component} from 'react'
 import {render} from 'react-dom'
 import { css } from 'glamor'
-import Example from '../../src'
+import FancyWeuiBox from '../../src'
 
 const imgs = [
-  'https://olcqde7ua.qnssl.com/Fl96hDtarkXwJWs2FoKkfyTJ9JdJ?imageView2/1/w/480/h/480',
-  'https://olcqde7ua.qnssl.com/FlGCkPbOmqGqmf6YaJDjivOAw7P8?imageView2/1/w/480/h/480',
+  'http://ww4.sinaimg.cn/bmiddle/006uLpxugy1fj3xe0tb2fj322o3404qv.jpg',
+  'http://ww4.sinaimg.cn/bmiddle/006uLpxugy1fj3xdxs52mj31kw2dce83.jpg',
 ]
 
 const style = css({
@@ -13,7 +13,7 @@ const style = css({
   padding: 0,
   overflow: 'hidden',
   ' li': { float: 'left', listStyleType: 'none', margin: '10px' },
-  ' li img': { width: '100px' }
+  ' li img': { width: '100px', height: '100px', objectFit: 'cover' }
 })
 
 class Demo extends Component {
@@ -24,20 +24,20 @@ class Demo extends Component {
       activeIndex: 0,
     }
   }
-  
+
   handleView = (index) => {
     this.setState({
       active: true,
       activeIndex: index,
     })
   }
-  
+
   hideBox = () => {
     this.setState({
       active: false,
     })
   }
-  
+
   render() {
     const { active, activeIndex } = this.state
     return <div>
@@ -47,11 +47,11 @@ class Demo extends Component {
           return (
             <li key={index} onClick={()=>this.handleView(index)}>
               <img src={img} alt=""/>
-            </li>    
+            </li>
           )
         })}
       </ul>
-      <Example 
+      <FancyWeuiBox
         active={active}
         activeIndex={activeIndex}
         imgs={imgs}
