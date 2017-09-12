@@ -20,7 +20,7 @@ describe('Component', () => {
     unmountComponentAtNode(node)
   })
 
-  it('displays a welcome message', () => {
+  it('displays an img', () => {
     render(<Component imgs={imgs} />, node, () => {
       expect(node.innerHTML).toContain('<img src="https://olcqde7ua.qnssl.com/Fl96hDtarkXwJWs2FoKkfyTJ9JdJ?imageView2/1/w/480/h/480" alt="">')
     })

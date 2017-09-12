@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
-import { css } from 'glamor'
+import {css} from 'glamor'
 import SwipeableViews from 'react-swipeable-views'
 
 const style = css({
